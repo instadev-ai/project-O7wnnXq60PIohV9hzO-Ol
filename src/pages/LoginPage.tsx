@@ -1,106 +1,85 @@
-import React from "react"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { LineChart, GithubIcon, Mail } from "lucide-react"
-import { Separator } from "@/components/ui/separator"
+import { Footer } from "@/components/layout/Footer"
 
-export function LoginPage(): React.JSX.Element {
+export function LoginPage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 dark:bg-gray-900">
-      {/* Logo and Back Link */}
-      <div className="absolute left-8 top-8">
-        <Link
-          to="/"
-          className="flex items-center text-gray-900 hover:text-gray-900/80 dark:text-white dark:hover:text-white/80"
-        >
-          <LineChart className="h-6 w-6" />
-          <span className="ml-2 text-lg font-bold">MetricFlow</span>
-        </Link>
-      </div>
-
-      <Card className="w-full max-w-md">
-        <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold">Welcome back</CardTitle>
-          <CardDescription>
-            Sign in to your account to continue
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {/* Social Login Buttons */}
-          <div className="grid grid-cols-2 gap-4">
-            <Button variant="outline" className="w-full">
-              <Mail className="mr-2 h-4 w-4" />
-              Google
-            </Button>
-            <Button variant="outline" className="w-full">
-              <GithubIcon className="mr-2 h-4 w-4" />
-              GitHub
-            </Button>
-          </div>
-
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <Separator className="w-full" />
+    <div className="flex min-h-screen flex-col">
+      <main className="flex-1">
+        <div className="container relative flex h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+          <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
+            <div className="absolute inset-0 bg-zinc-900" />
+            <div className="relative z-20 flex items-center text-lg font-medium">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="mr-2 h-6 w-6"
+              >
+                <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
+              </svg>
+              MetricFlow
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-card px-2 text-muted-foreground">
-                Or continue with
-              </span>
+            <div className="relative z-20 mt-auto">
+              <blockquote className="space-y-2">
+                <p className="text-lg">
+                  "This analytics platform has transformed how we track and optimize our SaaS metrics. It's been a game-changer for our business growth."
+                </p>
+                <footer className="text-sm">Sofia Davis, CEO of TechFlow</footer>
+              </blockquote>
             </div>
           </div>
-
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="name@example.com"
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="password">Password</Label>
-                <Link
-                  to="/forgot-password"
-                  className="text-sm text-primary hover:underline"
-                >
-                  Forgot password?
-                </Link>
+          <div className="lg:p-8">
+            <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+              <div className="flex flex-col space-y-2 text-center">
+                <h1 className="text-2xl font-semibold tracking-tight">
+                  Welcome back
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  Enter your email below to login to your account
+                </p>
               </div>
-              <Input
-                id="password"
-                type="password"
-                placeholder="Enter your password"
-                required
-              />
+              <div className="grid gap-4">
+                <div className="grid gap-2">
+                  <Input
+                    id="email"
+                    placeholder="name@example.com"
+                    type="email"
+                    autoCapitalize="none"
+                    autoComplete="email"
+                    autoCorrect="off"
+                  />
+                  <Input
+                    id="password"
+                    placeholder="your password"
+                    type="password"
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                  />
+                </div>
+                <Button>
+                  Sign In
+                </Button>
+              </div>
+              <p className="px-8 text-center text-sm text-muted-foreground">
+                Don't have an account?{" "}
+                <Link
+                  to="/signup"
+                  className="underline underline-offset-4 hover:text-primary"
+                >
+                  Sign up
+                </Link>
+              </p>
             </div>
           </div>
-        </CardContent>
-        <CardFooter className="flex flex-col space-y-4">
-          <Button className="w-full">Sign in</Button>
-          <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account?{" "}
-            <Link
-              to="/signup"
-              className="text-primary hover:underline"
-            >
-              Sign up
-            </Link>
-          </p>
-        </CardFooter>
-      </Card>
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }
