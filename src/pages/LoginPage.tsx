@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { LineChart, Github, Google } from "lucide-react"
+import { LineChart, GithubIcon, Mail } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 
 export function LoginPage(): React.JSX.Element {
@@ -39,11 +39,11 @@ export function LoginPage(): React.JSX.Element {
           {/* Social Login Buttons */}
           <div className="grid grid-cols-2 gap-4">
             <Button variant="outline" className="w-full">
-              <Google className="mr-2 h-4 w-4" />
+              <Mail className="mr-2 h-4 w-4" />
               Google
             </Button>
             <Button variant="outline" className="w-full">
-              <Github className="mr-2 h-4 w-4" />
+              <GithubIcon className="mr-2 h-4 w-4" />
               GitHub
             </Button>
           </div>

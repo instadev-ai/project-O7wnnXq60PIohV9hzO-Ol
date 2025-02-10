@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { LineChart, Github, Google } from "lucide-react"
+import { LineChart, GithubIcon, Mail, Shield, Clock } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Checkbox } from "@/components/ui/checkbox"
 
@@ -40,11 +40,11 @@ export function SignupPage(): React.JSX.Element {
           {/* Social Signup Buttons */}
           <div className="grid grid-cols-2 gap-4">
             <Button variant="outline" className="w-full">
-              <Google className="mr-2 h-4 w-4" />
+              <Mail className="mr-2 h-4 w-4" />
               Google
             </Button>
             <Button variant="outline" className="w-full">
-              <Github className="mr-2 h-4 w-4" />
+              <GithubIcon className="mr-2 h-4 w-4" />
               GitHub
             </Button>
           </div>
@@ -142,35 +142,11 @@ export function SignupPage(): React.JSX.Element {
       {/* Trust Indicators */}
       <div className="mt-8 flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
         <div className="flex items-center">
-          <svg
-            className="mr-2 h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-            />
-          </svg>
+          <Shield className="mr-2 h-4 w-4" />
           Secure and encrypted
         </div>
         <div className="flex items-center">
-          <svg
-            className="mr-2 h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+          <Clock className="mr-2 h-4 w-4" />
           Free 14-day trial
         </div>
       </div>
