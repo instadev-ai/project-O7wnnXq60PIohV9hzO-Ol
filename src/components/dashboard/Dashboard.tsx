@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Card,
   CardContent,
@@ -42,7 +43,7 @@ const data = [
   },
 ]
 
-export function Dashboard() {
+export function Dashboard(): React.JSX.Element {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -134,7 +135,7 @@ export function Dashboard() {
                   fontSize={12}
                   tickLine={false}
                   axisLine={false}
-                  tickFormatter={(value) => \`$\${value}\`}
+                  tickFormatter={(value) => `$${value}`}
                 />
                 <Bar
                   dataKey="total"
