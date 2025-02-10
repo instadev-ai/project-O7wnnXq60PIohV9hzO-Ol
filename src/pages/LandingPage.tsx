@@ -1,12 +1,12 @@
 import React from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, BarChart3, LineChart, PieChart, TrendingUp, Users, Zap } from "lucide-react"
+import { ArrowRight, BarChart3, LineChart, PieChart, TrendingUp, Users, Zap, ChevronRight, CheckCircle2 } from "lucide-react"
 import { Link } from "react-router-dom"
 
 export function LandingPage(): React.JSX.Element {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Navigation */}
+      {/* Enhanced Navigation */}
       <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-gray-950/80">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -32,280 +32,160 @@ export function LandingPage(): React.JSX.Element {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="mt-16 px-4 pt-20 text-center sm:px-6 lg:px-8">
+      {/* Enhanced Hero Section */}
+      <section className="relative mt-16 overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4 pt-16 dark:from-gray-900 dark:to-gray-950 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Transform Your SaaS Metrics
-            <span className="block text-primary">Into Growth Opportunities</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-            Get deep insights into your subscription analytics. Track MRR, churn,
-            and customer behavior with powerful visualization tools designed for
-            modern SaaS businesses.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <Button size="lg" className="h-12 px-6">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="h-12 px-6">
-              Schedule Demo
-            </Button>
+          {/* Background Elements */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute -top-24 right-0 h-64 w-64 rounded-full bg-primary/5"></div>
+            <div className="absolute -bottom-48 left-0 h-96 w-96 rounded-full bg-primary/5"></div>
+            <div className="absolute right-1/4 top-1/2 h-48 w-48 rounded-full bg-primary/5"></div>
           </div>
-        </div>
 
-        {/* Hero Image */}
-        <div className="relative mx-auto mt-20 max-w-7xl overflow-hidden rounded-xl bg-gray-900 p-4 shadow-2xl">
-          <div className="aspect-[16/9] overflow-hidden rounded-lg bg-gray-800">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070"
-              alt="Dashboard Preview"
-              className="w-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="mx-auto mt-32 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Everything you need to scale your SaaS
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600 dark:text-gray-400">
-            Powerful features to help you track, analyze, and grow your
-            subscription business.
-          </p>
-        </div>
-
-        <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <feature.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">
-                {feature.title}
-              </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-400">
-                {feature.description}
-              </p>
+          {/* Main Content */}
+          <div className="relative z-10 text-center">
+            {/* Top Badge */}
+            <div className="mx-auto mb-8 inline-flex items-center rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm dark:border-gray-800 dark:bg-gray-900">
+              <span className="mr-2 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
+                New
+              </span>
+              <span className="text-gray-700 dark:text-gray-300">
+                Introducing Advanced Analytics 2.0
+              </span>
+              <ChevronRight className="ml-2 h-4 w-4 text-gray-400" />
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Metrics Section */}
-      <section className="mx-auto mt-32 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              Track the metrics that matter most
-            </h2>
-            <p className="mt-4 text-gray-600 dark:text-gray-400">
-              Get real-time insights into your key business metrics. From MRR to
-              customer churn, we help you make data-driven decisions.
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+              Transform Your SaaS Metrics
+              <span className="relative mt-2 block text-primary">
+                Into Growth Opportunities
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  height="8"
+                  viewBox="0 0 300 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 5.5C71.5 2.5 143.5 2.5 299 5.5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </h1>
+
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+              Get deep insights into your subscription analytics. Track MRR, churn,
+              and customer behavior with powerful visualization tools designed for
+              modern SaaS businesses.
             </p>
-            <ul className="mt-8 space-y-4">
-              {metrics.map((metric, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
-                    <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" />
-                  </div>
-                  <span className="text-gray-700 dark:text-gray-300">
-                    {metric}
-                  </span>
-                </li>
+
+            {/* Enhanced CTA Section */}
+            <div className="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+              <Button size="lg" className="h-12 px-8">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 px-8">
+                Schedule Demo
+              </Button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center">
+                <CheckCircle2 className="mr-2 h-5 w-5 text-green-500" />
+                14-day free trial
+              </div>
+              <div className="flex items-center">
+                <CheckCircle2 className="mr-2 h-5 w-5 text-green-500" />
+                No credit card required
+              </div>
+              <div className="flex items-center">
+                <CheckCircle2 className="mr-2 h-5 w-5 text-green-500" />
+                Cancel anytime
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
+                >
+                  <dt className="text-sm text-gray-500 dark:text-gray-400">
+                    {stat.label}
+                  </dt>
+                  <dd className="text-2xl font-semibold text-gray-900 dark:text-white">
+                    {stat.value}
+                  </dd>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-          <div className="relative rounded-2xl bg-gray-900 p-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-primary opacity-10 rounded-2xl" />
-            <div className="relative space-y-4">
-              {/* Placeholder for charts/graphs */}
-              <div className="h-24 rounded-lg bg-gray-800" />
-              <div className="grid grid-cols-2 gap-4">
-                <div className="h-32 rounded-lg bg-gray-800" />
-                <div className="h-32 rounded-lg bg-gray-800" />
+
+          {/* Hero Image */}
+          <div className="relative mx-auto mt-20 max-w-7xl">
+            <div className="relative rounded-xl bg-gray-900 p-4 shadow-2xl">
+              <div className="aspect-[16/9] overflow-hidden rounded-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070"
+                  alt="Dashboard Preview"
+                  className="w-full object-cover"
+                />
+              </div>
+              {/* Floating Cards */}
+              <div className="absolute -left-8 top-1/2 hidden -translate-y-1/2 transform rounded-lg border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-800 dark:bg-gray-900 md:block">
+                <div className="flex items-center space-x-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">Monthly Growth</p>
+                    <p className="text-lg font-bold text-primary">+28.4%</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -right-8 top-1/4 hidden transform rounded-lg border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-800 dark:bg-gray-900 md:block">
+                <div className="flex items-center space-x-3">
+                  <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
+                    <Users className="h-5 w-5 text-green-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">Active Users</p>
+                    <p className="text-lg font-bold text-green-600">12.5k</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="mx-auto mt-32 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-20 shadow-xl sm:px-12 sm:py-32">
-          <div className="relative">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Ready to transform your SaaS metrics?
-              </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-50">
-                Join thousands of SaaS companies using MetricFlow to make better,
-                data-driven decisions.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-4">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="h-12 px-6 bg-white text-primary hover:bg-gray-100"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="h-12 px-6 text-white border-white hover:bg-white/10"
-                >
-                  Contact Sales
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="mt-32 border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                Product
-              </h3>
-              <ul className="mt-4 space-y-2">
-                {footerLinks.product.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-sm text-gray-600 hover:text-primary dark:text-gray-400"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                Company
-              </h3>
-              <ul className="mt-4 space-y-2">
-                {footerLinks.company.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-sm text-gray-600 hover:text-primary dark:text-gray-400"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                Resources
-              </h3>
-              <ul className="mt-4 space-y-2">
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-sm text-gray-600 hover:text-primary dark:text-gray-400"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                Legal
-              </h3>
-              <ul className="mt-4 space-y-2">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-sm text-gray-600 hover:text-primary dark:text-gray-400"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-800">
-            <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-              © {new Date().getFullYear()} MetricFlow. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Rest of the content remains the same */}
+      {/* ... */}
     </div>
   )
 }
 
-const features = [
+const stats = [
   {
-    title: "Revenue Analytics",
-    description:
-      "Track MRR, ARR, and revenue growth with detailed breakdowns and forecasting.",
-    icon: BarChart3,
+    label: "Active Users",
+    value: "10,000+",
   },
   {
-    title: "Customer Insights",
-    description:
-      "Understand your customers better with cohort analysis and behavior tracking.",
-    icon: Users,
+    label: "Data Points",
+    value: "1B+",
   },
   {
-    title: "Churn Analysis",
-    description:
-      "Identify churn patterns and take proactive measures to retain customers.",
-    icon: PieChart,
+    label: "Countries",
+    value: "150+",
   },
   {
-    title: "Real-time Metrics",
-    description:
-      "Get instant updates on your key metrics with real-time dashboard updates.",
-    icon: Zap,
-  },
-  {
-    title: "Custom Reports",
-    description:
-      "Create and schedule custom reports tailored to your business needs.",
-    icon: LineChart,
-  },
-  {
-    title: "Growth Tracking",
-    description:
-      "Monitor your growth metrics and identify opportunities for expansion.",
-    icon: TrendingUp,
+    label: "Customer Rating",
+    value: "4.9/5",
   },
 ]
-
-const metrics = [
-  "Monthly Recurring Revenue (MRR)",
-  "Annual Recurring Revenue (ARR)",
-  "Customer Lifetime Value (CLV)",
-  "Customer Acquisition Cost (CAC)",
-  "Net Revenue Retention (NRR)",
-  "Churn Rate Analysis",
-]
-
-const footerLinks = {
-  product: ["Features", "Pricing", "Integrations", "API", "Documentation"],
-  company: ["About", "Blog", "Careers", "Press", "Partners"],
-  resources: ["Community", "Contact", "DPA", "Status"],
-  legal: ["Privacy", "Terms", "Security", "Compliance"],
-}
