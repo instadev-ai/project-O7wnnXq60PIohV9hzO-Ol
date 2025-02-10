@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { DashboardLayout } from "@/components/layout/DashboardLayout"
 import { Dashboard } from "@/components/dashboard/Dashboard"
 import { LandingPage } from "@/pages/LandingPage"
+import { LoginPage } from "@/pages/LoginPage"
+import { SignupPage } from "@/pages/SignupPage"
 
 const queryClient = new QueryClient()
 
@@ -14,6 +16,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
             <Route
               path="/dashboard"
               element={
