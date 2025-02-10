@@ -13,7 +13,7 @@ export function LandingPage(): React.JSX.Element {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <LineChart className="h-8 w-8 text-primary" />
-              <span className="ml-2 text-xl font-bold">MetricFlow</span>
+              <span className="ml-2 text-xl font-bold">Itay</span>
             </div>
             <div className="hidden md:block">
               <div className="flex items-center space-x-4">
